@@ -6,7 +6,10 @@ import {
   // localIconLoader,
 } from "vitepress-plugin-group-icons";
 
-const baseUrl = "http://localhost:4173";
+const baseUrl = import.meta.env.PROD
+  ? "https://lloyd42.github.io"
+  : "http://localhost:4173";
+
 const RSS: RSSOptions = {
   // necessary（必选参数）
   title: "二进制模拟",
@@ -58,9 +61,11 @@ export default defineConfig({
       }),
     ],
   },
+
   title: "二进制模拟",
   description: "用代码记录世界",
   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  base: "/",
 
   lastUpdated: true,
 
