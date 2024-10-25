@@ -1,0 +1,5 @@
+:root {
+  --vp-code-color: var(--vp-c-green-2);
+  --vp-badge-tip-text: var(--vp-c-green-3);
+  --vp-badge-tip-bg: var(--vp-c-green-soft);
+}
